@@ -1,0 +1,33 @@
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 声明包 -->
+	<package name="myPackage" extends="struts-default">
+		<!-- 定义action -->
+		<action name="connectSQL" class="com.action.ConnectSQLAction">
+			<!-- 定义处理成功后的映射页面 -->
+			<result name="radioes">index.jsp</result>
+			<result name="ages">showResult.jsp</result>
+		</action>
+		<action name="getFoodName" class="com.action.GetFoodNameAction">
+		<result>showResult.jsp</result>
+		<result name="error">index.jsp</result>
+		</action>
+		<action name="getE" class="com.action.Calculate">
+		<result name="SUCCESS">Food.jsp</result>
+		<result name="getOther">showResult.jsp</result>	
+		<result name="getSVT">showResult.jsp</result>					
+		</action>
+		<action name="downloadAction" class="com.action.DownloadAction">
+		<result name="SUCCESS">index.jsp</result>
+		<result name="downloadActionaaa">showResult.jsp</result>
+		</action>
+		<action name="manage" class="com.action.ManageAction">
+		<result name="SUCCESS">managerIndex.jsp</result>
+		<result name="FAIL">managerLogin.jsp</result>
+		</action>
+	</package>
+	<include file="file.xml"/>
+	
+</struts>
